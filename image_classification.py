@@ -104,8 +104,10 @@ def model_training():
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     # Create results directory to save images if not exists
-    directory = "results"
-    os.makedirs(directory, exist_ok=True)
+    directory1 = "results/models"
+    os.makedirs(directory1, exist_ok=True)
+    directory2 = "results/images"
+    os.makedirs(directory2, exist_ok=True)
 
     # Set random seed for repeatability
     torch.manual_seed(42)
